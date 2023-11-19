@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stingo.css">
+<link rel="stylesheet" href="src/style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <meta name="author" content="John Mengo">
+    <meta name="description" content="">
+    <title>GameVerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="logo/rockstaricon.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border-radius: 17px;
+        }
+
+        button {
+            background-color: #4ca3af;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a04549;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <section class="container">
+            <section class="navbar">
+                <aside class="logo">
+                    <img src="logo/logoicon.jpg"  width="125px">
+                </aside>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="addproduct.html">Product</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                  <div class="cart">
+                    <i class="bi bi-cart2"></i>
+                    <div id="cartAmount" class="cartAmount">0</div>
+                  </div>
+                </a>
+            </section>
+           
+    
+        </section>
+    </header>
+  
+    <h1>Add a Product</h1>
+    <form id="productForm">
+        <label for="game">Game:</label>
+        <input type="text" id="game" name="game" required>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="photo">Choose a photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <button type="button" onclick="addProduct()">Add Product</button>
+    </form>
+
+    <script>
+        function addProduct() {
+            var game = document.getElementById('game').value;
+            var company = document.getElementById('company').value;
+            var photo = document.getElementById('photo').value;
+            var description = document.getElementById('description').value;
+
+            // You can perform additional validation if needed
+
+            // Create a new product object
+            var product = {
+                game: game,
+                company: company,
+                photo: photo,
+                description: description
+            };
+
+            // You can save the product to your database or perform other actions here
+            console.log(product);
+
+            // Optional: Clear the form fields after adding the product
+            document.getElementById('productForm').reset();
+        }
+    </script>
+
+
+    <script src="script.js"></script>
+    <script type="module" src="firebase.js"></script>
+<script src="src/Data.js"></script>
+<script src="src/cart.js"></script>
+</body>
+</html>

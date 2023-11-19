@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="John Mengo">
+        <meta name="description" content="">
+        <title>GameVerse</title>
+        <link rel="stylesheet" href="stingo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" href="logo/rockstaricon.jpg" type="image/x-icon">
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+<body style="background-color: unset;"> 
+                         
+    <div class="popup login-form">
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password"> Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+            </div>
+    
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+    
+            <div class="form-element">
+                <a href="index.html"><button type="button" id="login-btn">Sign in </button></a>
+            </div>
+    
+            <div class="form-element">
+                <a href=""> Forgot Password?</a>
+            </div>
+    
+            <div class="form-element">
+                <h4>Don't have an account? <a id="show-register" href="register.html"> Sign Up </a></h4>
+            </div>
+            <div class="element d-flex">
+              
+                <button id="google-btn"><i class="fa fa-google"></i></button>           
+               
+                <a href="https://web.facebook.com/login.php/?_rdc=1&_rdr" target="_blank"> <button id="facebook-btn"><i class="fa fa-facebook"></i></button></a>
+                <button id="twitter-btn"><i class="fa fa-twitter"></i></button>
+                <!-- <button>sign in with twitter</button> -->
+            </div>
+    
+        </div>
+    </div>
+
+    <script type="module" src="firebase.js">
+        
+    </script>
+</body>
+</html>

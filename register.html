@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="John Mengo">
+        <meta name="description" content="">
+        <title>GameVerse</title>
+        <link rel="stylesheet" href="stingo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" href="logo/rockstaricon.jpg" type="image/x-icon">    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+<body>
+    <div class="popup register-form">
+        <div class="form">
+            <h2>Register</h2>
+            <div class="form-element">
+                <label for="name"> First name</label>
+                <input type="name" name="fname" id="fname" placeholder="enter first name">
+            </div>
+            <div class="form-element">
+                <label for="name"> last name</label>
+                <input type="name" name="lname" id="lname" placeholder="enter last name">
+            </div>
+            <div class="form-element">
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email" placeholder="enter email">
+            </div>
+            <div class="form-element">
+                <label for="password"> password</label>
+                <input type="password" name="password" id="password" placeholder="enter password">
+            </div>
+            <div class="form-element">
+                <label for="password">Confirm password</label>
+                <input type="password" name="password" id="confirm-password" placeholder="enter password">
+            </div>
+    
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+    
+            <div class="form-element">
+                <a href="index.html"><button type="submit" id="register-btn" onclick="register()">Sign up</button></a>
+            </div>
+    
+            <div class="form-element">
+                <h4>Already have a password? <a href="login.html"> Log in </a></h4>
+            </div>
+    
+        </div>
+    </div>
+    <script type="module" src="firebase.js">
+        // MainForm.addEventListener('submit', registerUser);
+        // document.getElementById('register-btn').addEventListener('click', register, true);
+    </script>
+</body>
+</html>
